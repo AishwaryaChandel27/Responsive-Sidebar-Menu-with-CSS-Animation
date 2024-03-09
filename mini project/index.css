@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+.main_box {
+    background-image: url(photo.jpg);
+    height: 100vh;
+    background-size: cover;
+}
+
+.btn_one {
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+    position: absolute;
+    left: 16px;
+    line-height: 60px;
+    cursor: pointer;
+}
+
+.sidebar_menu {
+    position: fixed;
+    height: 100vh;
+    width: 300px;
+    background-color: rgba(250, 250, 250, 0.1);
+    box-shadow: 0 0 6px rgba(250, 250, 250, 0.5);
+    left: -300px; /* Start off screen */
+    transition: 0.3s linear;
+}
+
+.sidebar_menu .logo {
+    position: absolute;
+    width: 100%;
+    line-height: 60px;
+}
+
+.sidebar_menu .logo a {
+    position: absolute;
+    left: 50px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.sidebar_menu .btn_two {
+    color: gray;
+    width: 25px;
+    line-height: 60px;
+    position: absolute;
+    left: 275px;
+    cursor: pointer;
+}
+
+.sidebar_menu .menu {
+    width: 100%;
+    color: white;
+    position: absolute;
+    top: 80px;
+}
+
+.sidebar_menu .menu li {
+    padding: 14px 20px;
+    margin-top: 6px;
+}
+
+.sidebar_menu .menu a, .sidebar_menu .menu i {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+.sidebar_menu .menu i {
+    padding-right: 8px;
+    cursor: pointer;
+}
+
+.sidebar_menu .social_media {
+    color: white;
+    opacity: 0.5;
+    position: absolute;
+    left: 25%;
+    bottom: 50px;
+}
+
+.sidebar_menu .social_media i {
+    color: white;
+    opacity: 0.5;
+    padding: 0 5px;
+}
+
+#check {
+    display: none;
+}
+
+/* Show sidebar when checkbox is checked */
+#check:checked ~ .sidebar_menu {
+    left: 0;
+}
+
+/* Hide first button when checkbox is checked */
+#check:checked ~ .btn_one {
+    opacity: 0;
+}
+
+/* Show second button when checkbox is checked */
+#check:checked ~ .sidebar_menu .btn_two {
+    opacity: 1;
+}
+
+/* Add transition effect for sidebar animation */
+.sidebar_menu {
+    transition: left 0.3s ease;
+}
+
+/* Add hover effect for menu items */
+.sidebar_menu .menu li:hover {
+    box-shadow: 0 0 4px rgba(250, 250, 250, 0.5);
+}
+
+/* Increase size of first button on hover */
+.btn_one:hover {
+    font-size: 40px;
+}
+
+/* Increase size of second button on hover */
+.btn_two:hover {
+    font-size: 30px;
+}
+
+/* Increase opacity and scale of social media icons on hover */
+.sidebar_menu .social_media:hover i {
+    opacity: 1;
+    transform: scale(1.1);
+}
